@@ -1,6 +1,22 @@
-PROCEDURE dot_product(parameters)
-VAR
-    set_declarations
+PROCEDURE dot_product(v1, v2, ps)
+
 BEGIN
-    set_instructions
+    ps = 0
+  for i = 1 to length(v1) do
+    ps = ps + v1[i] * v2[i]
+  end for
+
 END
+
+ALGORITHM determine_orthogonality_using_procedure(n)
+for i = 1 to n do
+    read v1
+    read v2
+    dot_product(v1, v2, ps)
+    if ps = 0 then
+      print "Vectors are orthogonal"
+    else
+      print "Vectors are not orthogonal"
+    end if
+  end for
+END algorithm

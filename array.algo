@@ -1,6 +1,30 @@
 ALGORITHM ARRAY-PROBLEM
 VAR
-    set_declarations
+    set1,set2,sum = INTEGER
 BEGIN
-    set_instructions
+    // Initialize the two sets of elements as arrays
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+
+// Create a new set to hold all distinct elements
+distinct_elements = new Set()
+
+// Loop through each element in set1
+for element in set1:
+    // Add the element to the distinct set
+    distinct_elements.add(element)
+
+// Loop through each element in set2
+for element in set2:
+    // Add the element to the distinct set
+    distinct_elements.add(element)
+
+// Calculate the sum of all distinct elements in the distinct set
+sum = 0
+for element in distinct_elements:
+    sum = sum + element
+
+// Output the sum of all distinct elements
+print(sum)
+
 END
